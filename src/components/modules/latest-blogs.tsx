@@ -16,10 +16,10 @@ export function LatestBlogs() {
     offset: ['start end', 'end start'],
   });
 
-  const leftCardX = useTransform(scrollYProgress, [0, 0.5], [-150, 0]);
-  const rightCardX = useTransform(scrollYProgress, [0, 0.5], [150, 0]);
-  const centerCardY = useTransform(scrollYProgress, [0, 0.5], [-100, 0]);
-  const bottomCardY = useTransform(scrollYProgress, [0, 0.5], [100, 0]);
+  const leftCardX = useTransform(scrollYProgress, [0, 0.5], [-80, 0]);
+  const rightCardX = useTransform(scrollYProgress, [0, 0.5], [80, 0]);
+  const centerCardY = useTransform(scrollYProgress, [0, 0.5], [-60, 0]);
+  const bottomCardY = useTransform(scrollYProgress, [0, 0.5], [60, 0]);
   const opacity = useTransform(scrollYProgress, [0, 0.3], [0, 1]);
 
   return (

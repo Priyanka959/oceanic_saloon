@@ -22,13 +22,13 @@ export default function BlogsPage() {
         </div>
 
         <motion.div
-          className="absolute right-20 bottom-20 h-48 w-48 rounded-full border border-[#d4a574]/40"
+          className="absolute right-20 bottom-20 hidden h-48 w-48 rounded-full border border-[#d4a574]/40 md:block"
           initial={{ opacity: 0, scale: 0 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1 }}
         />
         <motion.div
-          className="absolute top-10 left-10 h-32 w-32 rounded-full bg-[#d4a574]/20 blur-2xl"
+          className="absolute top-10 left-10 hidden h-32 w-32 rounded-full bg-[#d4a574]/20 blur-2xl md:block"
           animate={{ scale: [1, 1.2, 1] }}
           transition={{ duration: 6, repeat: Infinity }}
         />

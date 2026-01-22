@@ -37,15 +37,15 @@ export default function ServicesPage() {
           <div className="absolute inset-0 bg-[linear-gradient(rgba(212,165,116,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(212,165,116,0.08)_1px,transparent_1px)] bg-[size:60px_60px]" />
         </div>
 
-        {/* Decorative elements */}
+        {/* Decorative elements - hidden on mobile */}
         <motion.div
-          className="absolute top-20 right-20 h-72 w-72 rounded-full border border-[#d4a574]/30"
+          className="absolute top-20 right-20 hidden h-72 w-72 rounded-full border border-[#d4a574]/30 md:block"
           initial={{ opacity: 0, scale: 0 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1.2 }}
         />
         <motion.div
-          className="absolute -bottom-20 -left-20 h-96 w-96 rounded-full bg-[#d4a574]/15 blur-3xl"
+          className="absolute -bottom-20 -left-20 hidden h-96 w-96 rounded-full bg-[#d4a574]/15 blur-3xl md:block"
           animate={{ scale: [1, 1.2, 1] }}
           transition={{ duration: 8, repeat: Infinity }}
         />

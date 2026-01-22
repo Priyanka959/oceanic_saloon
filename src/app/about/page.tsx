@@ -2,7 +2,7 @@
 
 import { teamMembers } from '@/lib/data';
 import { motion } from 'framer-motion';
-import { Award, Shield, Users, Heart, Star, CheckCircle } from 'lucide-react';
+import { Award, Shield, Users, Heart, CheckCircle } from 'lucide-react';
 
 export default function AboutPage() {
   const values = [
@@ -44,15 +44,15 @@ export default function AboutPage() {
           <div className="absolute inset-0 bg-[linear-gradient(rgba(212,165,116,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(212,165,116,0.08)_1px,transparent_1px)] bg-[size:60px_60px]" />
         </div>
 
-        {/* Decorative elements */}
+        {/* Decorative elements - hidden on mobile */}
         <motion.div
-          className="absolute top-20 right-20 h-72 w-72 rounded-full border border-[#d4a574]/30"
+          className="absolute top-20 right-20 hidden h-72 w-72 rounded-full border border-[#d4a574]/30 md:block"
           initial={{ opacity: 0, scale: 0 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1.2 }}
         />
         <motion.div
-          className="absolute bottom-10 left-10 h-40 w-40 rounded-full bg-[#d4a574]/15 blur-3xl"
+          className="absolute bottom-10 left-10 hidden h-40 w-40 rounded-full bg-[#d4a574]/15 blur-3xl md:block"
           animate={{ scale: [1, 1.2, 1] }}
           transition={{ duration: 8, repeat: Infinity }}
         />
@@ -266,17 +266,9 @@ export default function AboutPage() {
                     <p className="mb-4 font-medium text-[#c5a47e]">
                       {member.role}
                     </p>
-                    <p className="mb-4 text-sm leading-relaxed text-[#666666]">
+                    <p className="text-sm leading-relaxed text-[#666666]">
                       {member.bio}
                     </p>
-                    <div className="flex justify-center gap-1">
-                      {[...Array(5)].map((_, i) => (
-                        <Star
-                          key={i}
-                          className="h-4 w-4 fill-[#c5a47e] text-[#c5a47e]"
-                        />
-                      ))}
-                    </div>
                   </div>
                 </motion.div>
               ))}

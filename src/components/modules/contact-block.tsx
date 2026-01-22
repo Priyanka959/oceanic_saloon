@@ -31,14 +31,14 @@ export function ContactBlock() {
 
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-[#f5f5f5] to-white py-24 md:py-32">
-      {/* Background decoration */}
+      {/* Background decoration - positioned within bounds */}
       <motion.div
-        className="absolute -top-40 -right-40 h-80 w-80 rounded-full bg-[#c5a47e]/10 blur-3xl"
+        className="absolute -top-20 right-0 h-60 w-60 rounded-full bg-[#c5a47e]/10 blur-3xl md:-top-40 md:-right-40 md:h-80 md:w-80"
         animate={{ scale: [1, 1.2, 1] }}
         transition={{ duration: 8, repeat: Infinity }}
       />
       <motion.div
-        className="absolute -bottom-40 -left-40 h-80 w-80 rounded-full bg-[#0a0a0a]/10 blur-3xl"
+        className="absolute -bottom-20 left-0 h-60 w-60 rounded-full bg-[#0a0a0a]/10 blur-3xl md:-bottom-40 md:-left-40 md:h-80 md:w-80"
         animate={{ scale: [1.2, 1, 1.2] }}
         transition={{ duration: 8, repeat: Infinity }}
       />

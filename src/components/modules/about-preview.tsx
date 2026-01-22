@@ -146,16 +146,16 @@ export function AboutPreview() {
         </div>
       </div>
 
-      {/* Decorative elements */}
+      {/* Decorative elements - hidden on mobile to prevent overflow */}
       <motion.div
-        className="absolute top-20 right-20 h-40 w-40 rounded-full border border-[#c5a47e]/20"
+        className="absolute top-20 right-20 hidden h-40 w-40 rounded-full border border-[#c5a47e]/20 md:block"
         initial={{ opacity: 0, scale: 0 }}
         whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 1, delay: 0.5 }}
       />
       <motion.div
-        className="absolute bottom-20 left-20 h-24 w-24 rounded-full border border-[#c5a47e]/30"
+        className="absolute bottom-20 left-20 hidden h-24 w-24 rounded-full border border-[#c5a47e]/30 md:block"
         initial={{ opacity: 0, scale: 0 }}
         whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ once: true }}

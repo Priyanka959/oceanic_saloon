@@ -22,15 +22,14 @@ export function Hero() {
   return (
     <section
       ref={ref}
-      className="relative flex min-h-screen w-full items-center justify-center overflow-hidden bg-[#0a0a0a]"
+      className="relative flex min-h-[100svh] w-full items-center justify-center overflow-hidden bg-[#0a0a0a]"
     >
       {/* Background Image with Parallax */}
       <motion.div style={{ y: imageY, scale }} className="absolute inset-0 z-0">
-        <motion.div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: 'url(/assets/hero.jpg)',
-          }}
+        <motion.img
+          src="/assets/hero.jpg"
+          alt="Oceanic Salon Hero"
+          className="absolute inset-0 h-full w-full object-cover object-top"
           initial={{ scale: 1.2, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 1.5, ease: [0.22, 1, 0.36, 1] }}
@@ -218,15 +217,15 @@ export function Hero() {
         <ChevronDown className="h-5 w-5 text-[#c5a47e]" />
       </motion.div>
 
-      {/* Decorative elements */}
+      {/* Decorative elements - hidden on mobile to prevent overflow */}
       <motion.div
-        className="absolute top-20 left-10 h-32 w-32 rounded-full border border-[#c5a47e]/20"
+        className="absolute top-20 left-10 hidden h-32 w-32 rounded-full border border-[#c5a47e]/20 md:block"
         initial={{ opacity: 0, scale: 0 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1, delay: 1.5 }}
       />
       <motion.div
-        className="absolute bottom-40 left-20 h-16 w-16 rounded-full border border-[#c5a47e]/30"
+        className="absolute bottom-40 left-20 hidden h-16 w-16 rounded-full border border-[#c5a47e]/30 md:block"
         initial={{ opacity: 0, scale: 0 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1, delay: 1.7 }}

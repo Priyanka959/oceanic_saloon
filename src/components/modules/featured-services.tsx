@@ -12,9 +12,9 @@ export function FeaturedServices() {
 
   return (
     <section className="relative overflow-hidden bg-white py-24 md:py-32">
-      {/* Background decoration */}
-      <div className="absolute top-0 right-0 h-96 w-96 rounded-full bg-[#c5a47e]/5 blur-3xl" />
-      <div className="absolute bottom-0 left-0 h-96 w-96 rounded-full bg-[#0a0a0a]/5 blur-3xl" />
+      {/* Background decoration - positioned within bounds on mobile */}
+      <div className="absolute top-0 right-0 h-48 w-48 rounded-full bg-[#c5a47e]/5 blur-3xl md:h-96 md:w-96" />
+      <div className="absolute bottom-0 left-0 h-48 w-48 rounded-full bg-[#0a0a0a]/5 blur-3xl md:h-96 md:w-96" />
 
       <div className="relative z-10 container">
         {/* Header */}

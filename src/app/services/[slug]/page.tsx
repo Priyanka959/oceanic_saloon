@@ -4,14 +4,7 @@ import { notFound } from 'next/navigation';
 import { services } from '@/lib/data';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import {
-  Clock,
-  IndianRupee,
-  Check,
-  ArrowLeft,
-  Star,
-  ArrowRight,
-} from 'lucide-react';
+import { Clock, IndianRupee, Check, ArrowLeft, ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { use } from 'react';
 
@@ -35,18 +28,15 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
     .slice(0, 3);
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-[#0a0a0a] py-24 text-white">
-        <div className="absolute inset-0 opacity-10">
-          <div
-            className="absolute inset-0"
-            style={{
-              backgroundImage:
-                'radial-gradient(circle at 2px 2px, white 1px, transparent 0)',
-              backgroundSize: '40px 40px',
-            }}
-          />
+      <section className="relative overflow-hidden bg-gradient-to-br from-[#2c1810] via-[#1a0f0a] to-[#0f0705] py-32">
+        {/* Background gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-black/20" />
+
+        {/* Elegant background pattern */}
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-[linear-gradient(rgba(212,165,116,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(212,165,116,0.08)_1px,transparent_1px)] bg-[size:60px_60px]" />
         </div>
 
         <div className="relative z-10 container">
@@ -57,7 +47,7 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
           >
             <Link
               href="/services"
-              className="mb-8 inline-flex items-center gap-2 text-white/70 transition-colors hover:text-white"
+              className="mb-8 inline-flex items-center gap-2 text-[#f5f0e8]/70 transition-colors hover:text-[#f5f0e8]"
             >
               <ArrowLeft className="h-4 w-4" />
               Back to Services
@@ -70,13 +60,13 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
             transition={{ duration: 0.8 }}
             className="max-w-3xl"
           >
-            <span className="mb-4 inline-block rounded-full bg-[#c5a47e] px-4 py-2 text-sm font-medium text-white">
+            <span className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#d4a574]/40 bg-[#d4a574]/15 px-4 py-2 text-sm font-medium tracking-wide text-[#d4a574]">
               {service.category}
             </span>
-            <h1 className="mb-4 font-serif text-4xl font-bold md:text-5xl lg:text-6xl">
+            <h1 className="mb-4 font-serif text-4xl font-bold text-[#f5f0e8] md:text-5xl lg:text-6xl">
               {service.name}
             </h1>
-            <div className="flex items-center gap-6 text-white/80">
+            <div className="flex flex-wrap items-center gap-6 text-[#f5f0e8]/70">
               <div className="flex items-center gap-2">
                 <Clock className="h-5 w-5" />
                 <span>{service.duration} min</span>
@@ -84,14 +74,6 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
               <div className="flex items-center gap-2">
                 <IndianRupee className="h-5 w-5" />
                 <span>From ₹{service.price}</span>
-              </div>
-              <div className="flex items-center gap-1">
-                {[...Array(5)].map((_, i) => (
-                  <Star
-                    key={i}
-                    className="h-4 w-4 fill-[#c5a47e] text-[#c5a47e]"
-                  />
-                ))}
               </div>
             </div>
           </motion.div>

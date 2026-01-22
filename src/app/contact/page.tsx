@@ -56,13 +56,13 @@ export default function ContactPage() {
         </div>
 
         <motion.div
-          className="absolute top-20 right-20 h-40 w-40 rounded-full border border-[#d4a574]/40"
+          className="absolute top-20 right-20 hidden h-40 w-40 rounded-full border border-[#d4a574]/40 md:block"
           initial={{ opacity: 0, scale: 0 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1 }}
         />
         <motion.div
-          className="absolute bottom-10 left-10 h-24 w-24 rounded-full bg-[#d4a574]/20 blur-2xl"
+          className="absolute bottom-10 left-10 hidden h-24 w-24 rounded-full bg-[#d4a574]/20 blur-2xl md:block"
           animate={{ scale: [1, 1.2, 1] }}
           transition={{ duration: 6, repeat: Infinity }}
         />

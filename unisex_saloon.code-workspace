@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"name": "unisex_saloon",
+			"path": "."
+		},
+		{
+			"name": "node_modules",
+			"path": "../../node_modules"
+		}
+	],
+	"settings": {}
+}

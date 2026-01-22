@@ -10,9 +10,9 @@ export function VisionSection() {
     offset: ['start end', 'end start'],
   });
 
-  const leftImageX = useTransform(scrollYProgress, [0, 0.5], [-200, 0]);
-  const rightImageX = useTransform(scrollYProgress, [0, 0.5], [200, 0]);
-  const centerImageY = useTransform(scrollYProgress, [0, 0.5], [-150, 0]);
+  const leftImageX = useTransform(scrollYProgress, [0, 0.5], [-100, 0]);
+  const rightImageX = useTransform(scrollYProgress, [0, 0.5], [100, 0]);
+  const centerImageY = useTransform(scrollYProgress, [0, 0.5], [-80, 0]);
   const opacity = useTransform(scrollYProgress, [0, 0.3], [0, 1]);
 
   return (
@@ -89,16 +89,16 @@ export function VisionSection() {
               </motion.div>
             </motion.div>
 
-            {/* Decorative elements */}
+            {/* Decorative elements - hidden on mobile */}
             <motion.div
-              className="absolute top-10 right-10 h-20 w-20 rounded-full border-2 border-[#c5a47e]/30"
+              className="absolute top-10 right-10 hidden h-20 w-20 rounded-full border-2 border-[#c5a47e]/30 md:block"
               initial={{ scale: 0 }}
               whileInView={{ scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.6 }}
             />
             <motion.div
-              className="absolute bottom-10 left-10 h-12 w-12 rounded-full bg-[#c5a47e]/20"
+              className="absolute bottom-10 left-10 hidden h-12 w-12 rounded-full bg-[#c5a47e]/20 md:block"
               initial={{ scale: 0 }}
               whileInView={{ scale: 1 }}
               viewport={{ once: true }}
